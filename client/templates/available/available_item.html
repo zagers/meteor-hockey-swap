@@ -1,0 +1,10 @@
+<template name="availableItem">
+	<div class="availableItem">
+		<div class="available-content">
+			<h3>{{itemName}}</h3>
+			<p>Posted - {{prettifyDate dateAdded}}</p>
+			<small>{{itemDescription}}</small>
+		</div>
+		<a href="{{pathFor 'availablePage'}}" class="details btn btn-default">Details</a>
+	</div>
+</template>
