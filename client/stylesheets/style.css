@@ -88,3 +88,7 @@ margin-top: 7px; }
 position: relative;
 height: 100px;
 }
+
+.navbar-fixed-top {
+	position: relative;
+}
