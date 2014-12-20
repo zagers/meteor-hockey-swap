@@ -1,3 +1,3 @@
 Meteor.publish('available', function(){
-	return Available.find();
+	return Items.find();
 });

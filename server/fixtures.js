@@ -1,4 +1,4 @@
-if (Available.find().count() === 0){
+if (Items.find().count() === 0){
   
   var joeId = Meteor.users.insert({
     username: 'joe'
@@ -6,21 +6,21 @@ if (Available.find().count() === 0){
   
   Accounts.setPassword(joeId, 'abc123') 
 	
-  Available.insert({
+  Items.insert({
 		itemName: 'Skates',
 		itemDescription: 'Bauer adult size 7',
     userId: joeId,
     dateAdded: new Date()
 	});
 	
-	Available.insert({
+	Items.insert({
 		itemName: 'Helmet',
 		itemDescription: 'Mission youth large',
     userId: joeId,
     dateAdded: new Date()
 	});
 	
-	Available.insert({
+	Items.insert({
 		itemName: 'Pants',
 		itemDescription: 'Adult large',
     userId: joeId,

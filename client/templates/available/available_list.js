@@ -1,5 +1,5 @@
 Template.availableList.helpers({
 	available: function() {
-		return Available.find({}, {sort: {dateAdded: -1}});
+		return Items.find({}, {sort: {dateAdded: -1}});
 	}
 });

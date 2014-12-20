@@ -7,7 +7,7 @@ Template.availableSubmit.events({
 			itemDescription: $(e.target).find('[name=itemDescription]').val()
 		};
 		
-		Meteor.call('availableInsert', available, function(error, result){
+		Meteor.call('itemInsert', available, function(error, result){
 			if (error)
 				return alert(error.reason);
 			Router.go('availablePage', {_id: result._id});
