@@ -1,8 +1,26 @@
 <template name="availableList">
+	{{> search}}	
+	
 	<div class="availableList">
 		<h3>Available Items</h3>
-		{{#each available}}
+		
+		{{#ifEsInputIsEmpty index="items"}}
+			{{#each available}}
+				{{> availableItem}}
+			{{/each}}
+		{{/ifEsInputIsEmpty}}
+		
+		{{#esEach index="items"}}
 			{{> availableItem}}
-		{{/each}}
+		{{/esEach}}
+		
+		{{> esPagination index="items"}}
+		
+		{{#ifEsHasNoResults index="items"}}
+			<div class="not-found error-page jumbotron">
+				<h2>No results</h2>
+				<p>Sorry, there's nothing to see here.</p>
+			</div>
+		{{/ifEsHasNoResults}}
 	</div>
 </template>
