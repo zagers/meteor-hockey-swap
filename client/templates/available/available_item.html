@@ -1,7 +1,7 @@
 <template name="availableItem">
 	<div class="availableItem">
 		<div class="available-content">
-			<h3>{{itemName}}   <small>{{prettifyDate dateAdded}}</small></h3>
+			<h3>{{itemName}}   <small>added by {{userName}} on {{prettifyDate dateAdded}}</small></h3>
 			<small>{{itemDescription}}</small>
 		</div>
 		<a href="{{pathFor 'availablePage'}}" class="details btn btn-default">Details</a>
